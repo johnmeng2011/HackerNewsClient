@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="http://code.angularjs.org/1.0.3/angular-sanitize.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="./HackerNewsModule.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+<link rel="stylesheet" href="./HackerNewsClient.css"></link>
+
+<body>
+
+<div ng-app="hackerNewsClient" ng-controller="hackerNewsController">
+  
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h1 style="font-weight: bolder">Hacker News Client</h1>
+        </div> 
+        <div class="col-md-4"></div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <span class="input-group-addon"><i ng-click="doSearch()" class="glyphicon glyphicon-search"></i></span>
+                <input type="text" class="hackerSearch" ng-model="storyName" search-enter="doSearch()" placeholder="Search Story"/>
+				
+            </div>
+			
+        </div> 
+		<div class="col-md-2"> <div ng-show="showSpin" class="loader"></div></div>
+        <div class="col-md-4"></div>
+		
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="hackerContent" contenteditable="true"  ng-bind-html="storyContent" >
+                  
+            </div>
+			
+        </div> 
+        <div  class="col-md-4"></div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <button ng-click="goback()" ng-disabled="backwardDisable" ng->Previous</button>
+                </div>
+                <div class="col-md-4">
+                    <label ng-show="showLabel">Page&nbsp;{{page+1}}&nbsp;of&nbsp;{{nPage}}</label>
+					
+                </div>
+                <div class="col-md-4">
+                    <button ng-click="goahead()" ng-disabled="forwardDisable">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+    .hackerContent
+    {
+        overflow-y:scroll;
+        width:800px; /* or whatever width you want. */
+        max-width:800px; /* or whatever width you want. */
+        height: 600px;
+        max-height: 600px;
+        display: inline-block;
+        border: yellow 5px solid;
+        font-size: 20px;
+        
+    }
+
+    .hackerSearch
+    {
+        width: 400px;
+        height: 40px;
+      
+     
+    }
+
+    
+    button , label
+    {
+        width: 150px;
+        height:60px;
+        font-size: 20px;
+    }
+
+    input
+    {
+        font-size: 20px;
+    }
+
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 40px;
+        height: 40px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+      }
+      
+      /* Safari */
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
